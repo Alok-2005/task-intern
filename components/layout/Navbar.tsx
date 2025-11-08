@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Menu, X, GraduationCap, ChevronDown } from 'lucide-react';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
+// import {
+//   NavigationMenu,
+//   NavigationMenuContent,
+//   NavigationMenuItem,
+//   NavigationMenuLink,
+//   NavigationMenuList,
+//   NavigationMenuTrigger,
+// } from '@/components/ui/navigation-menu';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,34 +47,40 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-1">
             <Link
               href="/courses"
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium px-3 py-2 rounded hover:bg-emerald-50"
             >
               Courses
             </Link>
             <Link
               href="/mentors"
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium px-3 py-2 rounded hover:bg-emerald-50"
             >
               Mentors
             </Link>
             <Link
               href="/success-stories"
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium px-3 py-2 rounded hover:bg-emerald-50"
             >
               Success Stories
             </Link>
             <Link
               href="/resources"
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium px-3 py-2 rounded hover:bg-emerald-50"
             >
               Resources
             </Link>
             <Link
+              href="/blog"
+              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium px-3 py-2 rounded hover:bg-emerald-50"
+            >
+              Blog
+            </Link>
+            <Link
               href="/about"
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium px-3 py-2 rounded hover:bg-emerald-50"
             >
               About
             </Link>
@@ -100,38 +106,50 @@ export default function Navbar() {
 
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t shadow-lg">
-          <div className="px-4 py-6 space-y-4">
+          <div className="px-4 py-6 space-y-3">
             <Link
               href="/courses"
-              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
             >
               Courses
             </Link>
             <Link
               href="/mentors"
-              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
             >
               Mentors
             </Link>
             <Link
               href="/success-stories"
-              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
             >
               Success Stories
             </Link>
             <Link
               href="/resources"
-              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
             >
               Resources
             </Link>
             <Link
+              href="/blog"
+              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
+            >
+              Blog
+            </Link>
+            <Link
               href="/about"
-              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
             >
               About
             </Link>
-            <div className="pt-4 space-y-3">
+            <Link
+              href="/contact"
+              className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
+            >
+              Contact
+            </Link>
+            <div className="pt-4 space-y-3 border-t">
               <Button variant="outline" className="w-full">
                 Login
               </Button>
